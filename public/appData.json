@@ -1,0 +1,585 @@
+[
+   {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg",
+    "title": "Spotify",
+    "companyName": "Spotify Ltd.",
+    "id": 1,
+    "description": "Stream music and podcasts online.",
+    "size": 85,
+    "reviews": 12000,
+    "ratingAvg": 4.7,
+    "downloads": 50000000,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 1000 },
+      { "name": "4 star", "count": 3500 },
+      { "name": "5 star", "count": 7000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/75/Netflix_icon.svg",
+    "title": "Netflix",
+    "companyName": "Netflix Inc.",
+    "id": 2,
+    "description": "Watch movies and series.",
+    "size": 120,
+    "reviews": 9800,
+    "ratingAvg": 4.6,
+    "downloads": 100000000,
+    "ratings": [
+      { "name": "1 star", "count": 150 },
+      { "name": "2 star", "count": 250 },
+      { "name": "3 star", "count": 800 },
+      { "name": "4 star", "count": 3200 },
+      { "name": "5 star", "count": 5400 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg",
+    "title": "WhatsApp",
+    "companyName": "Meta",
+    "id": 3,
+    "description": "Chat and call instantly.",
+    "size": 70,
+    "reviews": 18000,
+    "ratingAvg": 4.6,
+    "downloads": 300000000,
+    "ratings": [
+      { "name": "1 star", "count": 600 },
+      { "name": "2 star", "count": 700 },
+      { "name": "3 star", "count": 1600 },
+      { "name": "4 star", "count": 6000 },
+      { "name": "5 star", "count": 9100 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png",
+    "title": "Instagram",
+    "companyName": "Meta",
+    "id": 4,
+    "description": "Share photos and reels.",
+    "size": 100,
+    "reviews": 25000,
+    "ratingAvg": 4.7,
+    "downloads": 320000000,
+    "ratings": [
+      { "name": "1 star", "count": 900 },
+      { "name": "2 star", "count": 1000 },
+      { "name": "3 star", "count": 2200 },
+      { "name": "4 star", "count": 9000 },
+      { "name": "5 star", "count": 11900 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg",
+    "title": "GitHub",
+    "companyName": "GitHub Inc.",
+    "id": 5,
+    "description": "Host and manage code.",
+    "size": 60,
+    "reviews": 11000,
+    "ratingAvg": 4.8,
+    "downloads": 90000000,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 250 },
+      { "name": "3 star", "count": 600 },
+      { "name": "4 star", "count": 3500 },
+      { "name": "5 star", "count": 6450 }
+    ]
+  },
+  
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
+    "title": "Microsoft",
+    "companyName": "Microsoft Corp.",
+    "id": 6,
+    "description": "Software and cloud-based solutions provider.",
+    "size": 150,
+    "reviews": 20000,
+    "ratingAvg": 4.7,
+    "downloads": 300000000,
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 400 },
+      { "name": "3 star", "count": 1000 },
+      { "name": "4 star", "count": 8000 },
+      { "name": "5 star", "count": 10300 }
+    ]
+  },
+
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/WordPress_blue_logo.svg/500px-WordPress_blue_logo.svg.png",
+    "title": "WordPress",
+    "companyName": "Automattic",
+    "id": 7,
+    "description": "Build and manage websites easily.",
+    "size": 90,
+    "reviews": 12000,
+    "ratingAvg": 4.6,
+    "downloads": 250000000,
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 400 },
+      { "name": "3 star", "count": 1000 },
+      { "name": "4 star", "count": 5000 },
+      { "name": "5 star", "count": 5300 }
+    ]
+  },
+
+  {
+    "image": "https://play-lh.googleusercontent.com/Eh-N9HKWJgQ4Oa5wmhaE5RbHkB3m3Ud9tsW6saUHis05BL7Xnpubi5iamR5lDKd-Ew",
+    "title": "Google",
+    "companyName": "Google LLC",
+    "id": 8,
+    "description": "Search engine and digital services platform.",
+    "size": 95,
+    "reviews": 30000,
+    "ratingAvg": 4.8,
+    "downloads": 500000000,
+    "ratings": [
+      { "name": "1 star", "count": 400 },
+      { "name": "2 star", "count": 500 },
+      { "name": "3 star", "count": 1200 },
+      { "name": "4 star", "count": 10000 },
+      { "name": "5 star", "count": 17900 }
+    ]
+  },
+  {
+    "image": "https://www.nopcommerce.com/images/thumbs/0014294_paypal-express-payment-plugin.png",
+    "title": "PayPal",
+    "companyName": "PayPal Holdings",
+    "id": 9,
+    "description": "Secure online payments and money transfers.",
+    "size": 85,
+    "reviews": 15000,
+    "ratingAvg": 4.6,
+    "downloads": 200000000,
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 400 },
+      { "name": "3 star", "count": 900 },
+      { "name": "4 star", "count": 6000 },
+      { "name": "5 star", "count": 7400 }
+    ]
+  },
+  {
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7WVOVsqf5q72J0oM2-Ma31wzw0vUHF23_hw&s",
+    "title": "Dropbox",
+    "companyName": "Dropbox Inc.",
+    "id": 10,
+    "description": "Cloud storage and file sharing platform.",
+    "size": 75,
+    "reviews": 9000,
+    "ratingAvg": 4.5,
+    "downloads": 150000000,
+    "ratings": [
+      { "name": "1 star", "count": 250 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 800 },
+      { "name": "4 star", "count": 3500 },
+      { "name": "5 star", "count": 4150 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Notion-logo.svg/250px-Notion-logo.svg.png?_=20220918151013",
+    "title": "Notion",
+    "companyName": "Notion Labs",
+    "id": 11,
+    "description": "All-in-one workspace for notes and tasks.",
+    "size": 65,
+    "reviews": 13000,
+    "ratingAvg": 4.6,
+    "downloads": 100000000,
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 350 },
+      { "name": "3 star", "count": 900 },
+      { "name": "4 star", "count": 5000 },
+      { "name": "5 star", "count": 6450 }
+    ]
+  },
+  {
+    "image": "https://play-lh.googleusercontent.com/RY1Cf8QNGY8B5asj1nd6c7Wca0rzug9NHbqZH1rTUGS-ciFHkrElY372fqiRtqJBfI_UFWFyL-X2F7el7EvLAg",
+    "title": "Khan Academy Kids",
+    "companyName": "Khan Academy",
+    "id": 12,
+    "description": "Educational app for kids learning.",
+    "size": 90,
+    "reviews": 8000,
+    "ratingAvg": 4.7,
+    "downloads": 30000000,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 250 },
+      { "name": "3 star", "count": 700 },
+      { "name": "4 star", "count": 3000 },
+      { "name": "5 star", "count": 3850 }
+    ]
+  },
+  {
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk-uiiYuy4QKYcMvQ4b-wC2EJLgjXGD6CRYQ&s",
+    "title": "Zoom",
+    "companyName": "Zoom Video Communications",
+    "id": 13,
+    "description": "Video meetings and online collaboration.",
+    "size": 85,
+    "reviews": 14000,
+    "ratingAvg": 4.4,
+    "downloads": 200000000,
+    "ratings": [
+      { "name": "1 star", "count": 400 },
+      { "name": "2 star", "count": 500 },
+      { "name": "3 star", "count": 1200 },
+      { "name": "4 star", "count": 6000 },
+      { "name": "5 star", "count": 5900 }
+    ]
+  },
+  {
+    "image": "https://images.seeklogo.com/logo-png/49/2/slack-logo-png_seeklogo-496177.png",
+    "title": "Slack",
+    "companyName": "Slack Technologies",
+    "id": 14,
+    "description": "Team communication and collaboration tool.",
+    "size": 70,
+    "reviews": 9000,
+    "ratingAvg": 4.5,
+    "downloads": 80000000,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 250 },
+      { "name": "3 star", "count": 700 },
+      { "name": "4 star", "count": 3500 },
+      { "name": "5 star", "count": 4350 }
+    ]
+  },
+  {
+    "image": "https://images.icon-icons.com/2407/PNG/512/trello_icon_146085.png",
+    "title": "Trello",
+    "companyName": "Atlassian",
+    "id": 15,
+    "description": "Organize projects using boards and cards.",
+    "size": 60,
+    "reviews": 7500,
+    "ratingAvg": 4.4,
+    "downloads": 70000000,
+    "ratings": [
+      { "name": "1 star", "count": 250 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 800 },
+      { "name": "4 star", "count": 2500 },
+      { "name": "5 star", "count": 3650 }
+    ]
+  },
+  {
+    "image": "https://icon2.cleanpng.com/20190716/gqu/kisspng-office-365-microsoft-outlook-microsoft-office-micr-1713879319235.webp",
+    "title": "Outlook",
+    "companyName": "Microsoft Corp.",
+    "id": 16,
+    "description": "Email and calendar management service.",
+    "size": 120,
+    "reviews": 11000,
+    "ratingAvg": 4.5,
+    "downloads": 200000000,
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 400 },
+      { "name": "3 star", "count": 900 },
+      { "name": "4 star", "count": 4500 },
+      { "name": "5 star", "count": 4900 }
+    ]
+  },
+  {
+    "image": "https://images.seeklogo.com/logo-png/15/1/mozilla-firefox-logo-png_seeklogo-158084.png",
+    "title": "Mozilla Firefox",
+    "companyName": "Mozilla Foundation",
+    "id": 17,
+    "description": "Open-source web browser focused on privacy.",
+    "size": 95,
+    "reviews": 15000,
+    "ratingAvg": 4.6,
+    "downloads": 300000000,
+    "ratings": [
+      { "name": "1 star", "count": 400 },
+      { "name": "2 star", "count": 500 },
+      { "name": "3 star", "count": 1200 },
+      { "name": "4 star", "count": 6000 },
+      { "name": "5 star", "count": 6900 }
+    ]
+  },
+  {
+    "image": "https://img.freepik.com/premium-vector/viber-icon_578229-264.jpg?semt=ais_hybrid&w=740&q=80",
+    "title": "Viber",
+    "companyName": "Rakuten",
+    "id": 18,
+    "description": "Messaging and calling app with global reach.",
+    "size": 75,
+    "reviews": 9000,
+    "ratingAvg": 4.4,
+    "downloads": 150000000,
+    "ratings": [
+      { "name": "1 star", "count": 400 },
+      { "name": "2 star", "count": 500 },
+      { "name": "3 star", "count": 1100 },
+      { "name": "4 star", "count": 3000 },
+      { "name": "5 star", "count": 4000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
+    "title": "ChatGPT",
+    "companyName": "OpenAI",
+    "id": 19,
+    "description": "AI assistant for conversations and tasks.",
+    "size": 60,
+    "reviews": 20000,
+    "ratingAvg": 4.9,
+    "downloads": 300000000,
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 200 },
+      { "name": "3 star", "count": 500 },
+      { "name": "4 star", "count": 6000 },
+      { "name": "5 star", "count": 13200 }
+    ]
+  },
+   {
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQthCh4iharGsZRKv-k65qcpsA3Yd8iyqRTdQ&s",
+    "title": "Headspace",
+    "companyName": "Headspace Inc.",
+    "id": 20,
+    "description": "Meditation and mindfulness app.",
+    "size": 70,
+    "reviews": 9000,
+    "ratingAvg": 4.7,
+    "downloads": 60000000,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 250 },
+      { "name": "3 star", "count": 700 },
+      { "name": "4 star", "count": 3000 },
+      { "name": "5 star", "count": 4850 }
+    ]
+  },
+  {
+    "image": "https://cdn.dlcompare.com/others_jpg/upload/news/image/en-new-valve-guidelines-suggest-0fbf22a7-image-0fbf228a.jpg.webp",
+    "title": "Steam",
+    "companyName": "Valve Corp.",
+    "id": 21,
+    "description": "Digital distribution platform for games.",
+    "size": 130,
+    "reviews": 17000,
+    "ratingAvg": 4.8,
+    "downloads": 200000000,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 800 },
+      { "name": "4 star", "count": 6000 },
+      { "name": "5 star", "count": 9700 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/19/Unity_Technologies_logo.svg",
+    "title": "Unity",
+    "companyName": "Unity Technologies",
+    "id": 22,
+    "description": "Game development platform for creators.",
+    "size": 150,
+    "reviews": 8000,
+    "ratingAvg": 4.5,
+    "downloads": 100000000,
+    "ratings": [
+      { "name": "1 star", "count": 250 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 700 },
+      { "name": "4 star", "count": 3000 },
+      { "name": "5 star", "count": 3750 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+    "title": "Amazon",
+    "companyName": "Amazon Inc.",
+    "id": 23,
+    "description": "Online shopping and cloud computing platform.",
+    "size": 120,
+    "reviews": 18000,
+    "ratingAvg": 4.6,
+    "downloads": 350000000,
+    "ratings": [
+      { "name": "1 star", "count": 500 },
+      { "name": "2 star", "count": 600 },
+      { "name": "3 star", "count": 1500 },
+      { "name": "4 star", "count": 7000 },
+      { "name": "5 star", "count": 8400 }
+    ]
+  },
+   {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopify_logo_2018.svg",
+    "title": "Shopify",
+    "companyName": "Shopify Inc.",
+    "id": 24,
+    "description": "Build and manage your online store easily.",
+    "size": 90,
+    "reviews": 8000,
+    "ratingAvg": 4.5,
+    "downloads": 90000000,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 250 },
+      { "name": "3 star", "count": 700 },
+      { "name": "4 star", "count": 3000 },
+      { "name": "5 star", "count": 3850 }
+    ]
+  },
+
+   {
+    "image": "https://play-lh.googleusercontent.com/zgD7iittjyW1lOnGK7AoDuVfhv5nGWVseK4xVxMCOCajUHeSXontX7vGJL7l6UOd9w=w240-h480-rw",
+    "title": "Nike Training Club",
+    "companyName": "Nike Inc.",
+    "id": 25,
+    "description": "Fitness workouts and training plans.",
+    "size": 95,
+    "reviews": 12000,
+    "ratingAvg": 4.6,
+    "downloads": 50000000,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 800 },
+      { "name": "4 star", "count": 4000 },
+      { "name": "5 star", "count": 6700 }
+    ]
+  },
+  {
+    "image": "https://play-lh.googleusercontent.com/1udXK8cLZbTqF8fY5H1hMfx9uQH7knUHU0-lMGqcZeIqptldP6IUdpg9XdJEqkNz64zF3R-nE68I9NoQh31fnQ",
+    "title": "Adidas Running",
+    "companyName": "Adidas",
+    "id": 26,
+    "description": "Track running and fitness activities.",
+    "size": 90,
+    "reviews": 10000,
+    "ratingAvg": 4.5,
+    "downloads": 40000000,
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 400 },
+      { "name": "3 star", "count": 900 },
+      { "name": "4 star", "count": 3500 },
+      { "name": "5 star", "count": 4900 }
+    ]
+  },
+  {
+    "image": "https://companieslogo.com/img/orig/FIT.defunct-1627f32e.png?t=1720244491",
+    "title": "Fitbit",
+    "companyName": "Google LLC",
+    "id": 27,
+    "description": "Track health, sleep, and daily activity.",
+    "size": 85,
+    "reviews": 14000,
+    "ratingAvg": 4.6,
+    "downloads": 60000000,
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 350 },
+      { "name": "3 star", "count": 900 },
+      { "name": "4 star", "count": 5000 },
+      { "name": "5 star", "count": 7450 }
+    ]
+  },
+  {
+    "image": "https://miro.medium.com/v2/0*9nZZPF6qwL2j4EBX.png",
+    "title": "Strava",
+    "companyName": "Strava Inc.",
+    "id": 28,
+    "description": "Track cycling and running performance.",
+    "size": 88,
+    "reviews": 9000,
+    "ratingAvg": 4.5,
+    "downloads": 45000000,
+    "ratings": [
+      { "name": "1 star", "count": 250 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 800 },
+      { "name": "4 star", "count": 3200 },
+      { "name": "5 star", "count": 4450 }
+    ]
+  },
+
+
+
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
+    "title": "Apple",
+    "companyName": "Apple Inc.",
+    "id": 29,
+    "description": "Premium devices and software ecosystem.",
+    "size": 200,
+    "reviews": 25000,
+    "ratingAvg": 4.8,
+    "downloads": 400000000,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 900 },
+      { "name": "4 star", "count": 9000 },
+      { "name": "5 star", "count": 14600 }
+    ]
+  },
+  {
+    "image": "https://download.logo.wine/logo/IMDb/IMDb-Logo.wine.png",
+    "title": "IMDb",
+    "companyName": "Amazon",
+    "id": 30,
+    "description": "Discover movies, TV shows, and ratings.",
+    "size": 80,
+    "reviews": 7000,
+    "ratingAvg": 4.4,
+    "downloads": 80000000,
+    "ratings": [
+      { "name": "1 star", "count": 250 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 800 },
+      { "name": "4 star", "count": 2500 },
+      { "name": "5 star", "count": 3150 }
+    ]
+  },
+  {
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSACtZm64BzMh2bvZ0iWciKfY7ty3v7UGU0vw&s",
+    "title": "Duolingo",
+    "companyName": "Duolingo Inc.",
+    "id": 31,
+    "description": "Learn languages in a fun way.",
+    "size": 85,
+    "reviews": 20000,
+    "ratingAvg": 4.8,
+    "downloads": 400000000,
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 400 },
+      { "name": "3 star", "count": 1000 },
+      { "name": "4 star", "count": 9000 },
+      { "name": "5 star", "count": 9300 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/en/6/63/MyFitnessPal_Logo.png",
+    "title": "MyFitnessPal",
+    "companyName": "Under Armour",
+    "id": 32,
+    "description": "Track diet and calories easily.",
+    "size": 85,
+    "reviews": 14000,
+    "ratingAvg": 4.6,
+    "downloads": 100000000,
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 400 },
+      { "name": "3 star", "count": 900 },
+      { "name": "4 star", "count": 5000 },
+      { "name": "5 star", "count": 7400 }
+    ]
+  }  
+]
