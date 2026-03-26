@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Banner from '../../Components/Banner/Banner';
 ;
 import Logo from "../../assets/logo.png"
+import Trending from '../Trending/Trending';
 
 
 
@@ -21,7 +22,7 @@ const Home = () => {
                 return(
                     <div className='flex flex-col justify-center items-center h-screen'>
                         <img className='w-16 animate-spin mb-4' src={Logo} alt='Loading...'></img>
-                        <p className='text-gray-600 font-nomal text-lg animate-pulse'>Loading Installation.....</p>
+                        <p className='text-gray-600 font-nomal text-lg animate-pulse'>Loading Home.....</p>
                     </div>
                 );
             }
@@ -30,6 +31,7 @@ const Home = () => {
     return (
         <div className='bg-white pt-10'>
             <Banner></Banner>
+            <Trending></Trending>
             
             
             

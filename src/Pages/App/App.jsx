@@ -35,10 +35,16 @@ const App = ({ singleApp }) => {
                   <img className="w-3" src={ratings} alt="" />
                   {ratingAvg}
                 </div>
+                {/* new */}
+                <div className="badge badge-outline">
+                  <img className="w-3" src={ratings} alt="" />
+                  {ratingAvg}
+                </div>
+                {/* new */}
               </div>
             </div>
           </div>
-        </Link>
+        </Link> 
       </div>
     </div>
   );

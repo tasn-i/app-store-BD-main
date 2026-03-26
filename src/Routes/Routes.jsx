@@ -33,6 +33,7 @@ export const router = createBrowserRouter([
         },
          {
           path: "/appDetails/:id",
+          // loader: ()=>{fetch('appData.json')},
           loader: ()=>fetch('appData.json'),
           Component: AppDetails
         }  

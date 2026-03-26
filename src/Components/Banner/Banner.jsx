@@ -34,7 +34,7 @@ const Banner = () => {
           </div>
         </div>
 
-        <div className="p-24 bg-linear-to-br from-[#632EE3] to-[#9F62F2] text-center items-center">
+        <div className="py-15 bg-linear-to-br from-[#632EE3] to-[#9F62F2] text-center items-center">
             <h1 className="font-bold text-xl md:text-2xl lg:text-4xl text-white">Trusted by Millions, Built for You</h1>
             <div className="md:flex justify-center items-center gap:6 md:10 my-6">
                 <div className="card shadow-sm p-8 m-4">

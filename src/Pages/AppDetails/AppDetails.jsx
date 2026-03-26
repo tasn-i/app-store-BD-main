@@ -10,17 +10,17 @@ import review from "../../assets/icon-review.png"
 const AppDetails = () => {
   const { id } = useParams();
   const appId = parseInt(id);
-  // console.log(id);
+  console.log(id);
 
   const data = useLoaderData();
   // console.log(data);
-  const singleApp = data.find((app) => app.id === appId);
+  const singleApp = data?.find((app) => app.id === appId);
   // console.log(singleApp);
   // console.log(typeof id, data);
 
-//   if(!singleApp){
-//     return <p className="text-center items-center text-black text-2xl font-bold">Loading....</p>
-//   }
+  // if(!singleApp || true){
+  //   return <p className="text-center items-center text-black text-2xl font-bold">Loading....</p>
+  // }
 
   const { image, title, downloads, ratingAvg, reviews } = singleApp;
 
@@ -68,16 +68,20 @@ const AppDetails = () => {
                 </div>
               </div>
               <div>
-               
                      <button onClick={()=>handleInstalled(appId)} className="btn btn-outline text-black hover:bg-white">Installed </button>
-               
-               
               </div>
+
+
+              
+                {/* Go back */}
+
+                    <a className="btn bg-linear-to-br from-[#632EE3] to-[#9F62F2] transition-all duration-300 cursor-pointer text-white" href="/">Go Back!</a>
             </div>
           </div>
         </div>
       </div>
     </div>
+    // <h1>test or s</h1>
   );
 };
 

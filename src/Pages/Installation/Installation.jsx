@@ -18,8 +18,8 @@ const Installation = () => {
         const ConvertedStoredApps= storedAppData.map(id => parseInt(id));
         // console.log(ConvertedStoredApps);
         const myInstallated = data.filter (app =>ConvertedStoredApps.includes(app.id));
-        console.log(myInstallated)
-         setAppList(myInstallated)
+        console.log(myInstallated);
+         setAppList(myInstallated);
 
         //  sort
         setOriginalApps(myInstallated);
