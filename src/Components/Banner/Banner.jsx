@@ -6,18 +6,18 @@ const Banner = () => {
   return (
     <div>
       <div>
-        <div className=" pt-8  text-center">
-          <h1 className="font-semibold md:font-bold lg:font-extrabold text-xl md:text-4xl lg:text-7xl w-full md:3/4 lg:w-2/4 mx-auto p-4">
+        <div className=" pt-8  text-center bg-white ">
+          <h1 className="font-semibold md:font-bold text-black lg:font-extrabold text-xl md:text-4xl lg:text-7xl w-full md:3/4 lg:w-2/4 mx-auto p-4">
             We Build <span className="text-purple-600"> Productive </span>Apps
           </h1>
-          <p className="w-full md:10/12 lg:w-8/12 mx-auto p-4">
+          <p className="w-full md:10/12 lg:w-8/12 mx-auto p-4 text-gray-500">
             App Store BD we craft innovative apps designed to make everyday life
             simpler, smarter, and more exciting.Our goal is to turn your ideas
             into digital experiences that truly make an impact
           </p>
-          <div className="mt-8">
+          <div className="mt-8 text-black">
             <a href="https://play.google.com/store/games">
-              <button className="btn btn-outline mr-2">
+              <button className="btn btn-outline mr-2 ">
                 <FaGooglePlay size={18} className="text-cyan-500" />
                 Google Play
               </button>

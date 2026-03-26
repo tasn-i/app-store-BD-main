@@ -1,10 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import AllApps from '../AllApps/AllApps';
 import { useLoaderData } from 'react-router';
+import Logo from "../../assets/logo.png"
 
 const Apps = () => {
     const data = useLoaderData();
-    console.log(data);
+    // console.log(data);
+
+    // loading
+    const [loading,setLoading] = useState(true);
+    useEffect(()=>{
+        setTimeout(() =>{
+            setLoading(false);
+        }, 200)
+    })
+
+
+    // loading
+    if(loading){
+            return(
+                <div className='flex flex-col justify-center items-center h-screen'>
+                    <img className='w-16 animate-spin mb-4' src={Logo} alt='Loading...'></img>
+                    <p className='text-gray-600 font-nomal text-lg animate-pulse'>Loading Installation.....</p>
+                </div>
+            );
+        }
     return (
         <div> 
             <div className='text-center items-center py-8'>
