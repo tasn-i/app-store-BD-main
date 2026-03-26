@@ -57,7 +57,7 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="navbar-end">
-            <a className="btn bg-linear-to-br from-[#632EE3] to-[#9F62F2] transition-all duration-300 cursor-pointer text-white" href="https://github.com/kanikanoorsathi"><VscGithub size={20} />Contribute</a>
+            <a className="btn bg-linear-to-br from-[#632EE3] to-[#9F62F2] transition-all duration-300 cursor-pointer text-white" href="https://github.com/tasn-i"><VscGithub size={20} />Contribute</a>
           </div>
         </div>
       </div>
