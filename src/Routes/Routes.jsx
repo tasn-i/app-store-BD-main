@@ -5,8 +5,8 @@ import ErrorPage from '../Pages/ErrorPaga/ErrorPage';
 import Home from '../Pages/Home/Home';
 import Apps from '../Pages/Apps/Apps';
 import Installation from '../Pages/Installation/Installation';
-import AppDetails from '../Pages/appDetails/AppDetails';
-
+// import AppDetails from '../Pages/appDetails/AppDetails';
+   import AppDetails from '../Pages/appDetails/AppDetails'
 import { createHashRouter } from 'react-router';
 
 
@@ -39,18 +39,6 @@ export const router = createHashRouter([
           loader: () => fetch('appData.json'),
           Component: AppDetails
         }
-
-
-
-        // {
-        //   path: "/appDetails/:id",
-        //   loader: async({params}) =>{
-        //       const res = await fetch('appData.json');
-        //       const data = await res.json();
-        //       return data.find(app => app.id === Number(params.id));
-        //   },
-        //   Component: AppDetails
-        // }
          
     ]
   },

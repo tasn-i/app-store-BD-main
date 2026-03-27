@@ -24,7 +24,7 @@ const App = ({ singleApp, showButton, onUninstall }) => {
             {/* <div>{children}</div> */}
             <div className=" ">
               <figure>
-                <img className="w-64 `h-[166px]`" src={image} alt="App" />
+                <img className="w-16 h-16" src={image} alt="App" />
               </figure>
               <div className="card-body">
                 <h2 className="card-title font-bold text-xl text-black">

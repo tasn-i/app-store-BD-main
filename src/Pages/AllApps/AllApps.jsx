@@ -3,16 +3,7 @@ import React, { Suspense  } from 'react';
 import App from '../App/App';
 
 const AllApps = ({data}) => {
-    // const [allApps, setAllApps] = useState([]);
 
-    // useEffect(() =>{
-    //     fetch("appData.json").then(res => res.json()).then(data =>{
-    //         // console.log(data);
-    //         setAllApps(data)
-    //     },[])
-    // })
-
-    // const appPromise=fetch('./appData.json').then(res => res.json());
 
     return (
         <div>

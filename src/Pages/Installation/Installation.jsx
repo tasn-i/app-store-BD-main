@@ -7,8 +7,6 @@ import Logo from "../../assets/logo.png"
 import { removeFromDB } from '../../Installed/addToDB';
 import { ToastContainer, toast } from 'react-toastify';
 
-
-
   
 const Installation = () => {
     const [loading,setLoading] =useState(true);
@@ -26,10 +24,8 @@ const Installation = () => {
         // console.log(myInstallated);
          setAppList(myInstallated);
 
-        //  sort
         setOriginalApps(myInstallated);
 
-        // Loading
         setTimeout(() =>{
             setLoading(false);
         }, 500)
@@ -47,7 +43,6 @@ const Installation = () => {
             setAppList(sorted);
         }
             
-
     }
 
     const handleUninstall =(id) => {
@@ -67,15 +62,14 @@ const Installation = () => {
         );
     }
     return (
-        <div className='bg-white p-30'>
+        <div className='bg-white px-4 py-5 md:py-10 lg:py-30'>
             
-            {/* <h1 className='text-black'>Hellow the world</h1> */}
             <div className='text-center items-center gap-4 '>
-                <h1 className='text-black font-bold text-3xl'>Your Installed Apps</h1>
-                <p className='text-sm font-normal text-gray-500 mt-4'>Explore All Trending Apps on the Market developed by us</p>
+                <h1 className='text-black font-bold text-xl md:text-3xl'>Your Installed Apps</h1>
+                <p className='text-sm font-normal text-gray-500 my-4'>Explore All Trending Apps on the Market developed by us</p>
             </div>
 
-            <div className='flex justify-between items-center cursor-pointer'>
+            <div className='flex md:justify-between items-center cursor-pointer gap-4 w-10/12 mx-auto'>
                 <div><h1 className='font-bold text-black'>Installed App: {appList.length}</h1></div>
                 <div>
                     <details className="dropdown">
@@ -90,28 +84,13 @@ const Installation = () => {
 
             </div>
 
-            {/* <div>
-                
-                <div className= ''>
 
-                    <div className='grid grid-cols-1 gap-10 mt-10  '>
-                       {
-                          appList.map(a => <App key={a.id} singleApp={a} ></App>)
-                       } 
-                   </div>
-
-                </div>
-                
-            </div> */}
-
-            {/* Uninstall */}
-
-            <div className=' pt-20 w-8/12 mx-auto flex flex-col gap-10'>
+            <div className=' pt-20 w-full md:w-8/12 mx-auto flex flex-col gap-10'>
                 {
                     appList. length === 0 ?(
                         <h1 className='text-center font-bold text-purple-600 text-2xl'>No App Installed Yet</h1>
                     ) : (
-                        appList.map(a => <App key={a.id} singleApp={a} showButton={true} onUninstall={handleUninstall}>
+                        appList.map(a => <App className="flex flex-col-3 bg-green" key={a.id} singleApp={a} showButton={true} onUninstall={handleUninstall}>
                             <button onClick={()=> handleUninstall(a.id)}
                              className=' btn btn-outline bg-purple-500 text-black my-20 hover:bg-purple-600'>
                                      Uninstall
@@ -121,11 +100,9 @@ const Installation = () => {
                         
                     )
                 }
-                {/* <h2 className='text-white p-20 bg-amber-600'></h2> */}
             </div>
             <div >
-                
-                {/* <ToastContainer  position='top-right autoClose={200}'/> */}
+
                 <ToastContainer/>
             </div>
 

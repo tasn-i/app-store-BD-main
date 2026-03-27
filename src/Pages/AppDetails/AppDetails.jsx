@@ -8,11 +8,7 @@ import review from "../../assets/icon-review.png"
 import { ToastContainer, toast } from 'react-toastify';
 // import{getStoredDB} from "../../Installed/addToDB"
 
-// bar Chart
-
 import { BarChart, Legend, XAxis, YAxis, CartesianGrid, Tooltip, Bar, ResponsiveContainer } from 'recharts';
-// import { RechartsDevtools } from '@recharts/devtools';
-
 
 const AppDetails = () => {
   const { id } = useParams();
@@ -21,39 +17,20 @@ const AppDetails = () => {
 
   const data = useLoaderData(); 
   // console.log(data);
-  const singleApp = data?.find((app) => app.id === appId);
-  // console.log(singleApp);
-  // console.log(typeof id, data);
-
-  // if(!singleApp || true){
-  //   return <p className="text-center items-center text-black text-2xl font-bold">Loading....</p>
-  // }
-
-  // const singleApp = useLoaderData();  ekhon
+   const singleApp = data?.find((app) => app.id === appId);
    const [isInstalled, setIsInstalled] = useState(false);
-  // const storedApps = getStoredDB()
-  //  const [isInstalled, setIsInstalled] = useState(storedApps.includes(appId));
-
-  const { image, title, downloads, ratingAvg, reviews, description, companyName  } = singleApp || {};
- 
-
-  const handleInstalled = id =>{
+   const { image, title, downloads, ratingAvg, reviews, description, companyName  } = singleApp || {};
+   const handleInstalled = id =>{
     addToStoredDB(id);
       setIsInstalled (true);
       toast.success("App installed successfully!")
   };
-
   // BarChart
   if(!singleApp){
     return <p className="text-center mt-10">Loading....</p>
   }
-
   return (
     <div>
-      {/* <div className='p-28 text-black' >
-                <h1>App Details</h1>
-            </div> */}
-
       <div>
         <div className="bg-white w-full pt-5">
           <div className="card card-side bg-white shadow-lg mx-auto p-8 mt-6 ">
@@ -86,7 +63,6 @@ const AppDetails = () => {
                 </div>
               </div>
               <div>
-                     {/* <button onClick={()=>handleInstalled(appId)} className="btn btn-outline text-black hover:bg-white">Installed </button> */}
                      <button onClick={()=>handleInstalled(appId)} disabled={isInstalled}
                          className={`btn btn-outline text-black ${
                             isInstalled ? 'bg-gray-300 cursor-not-allowed text-gray-500'
@@ -97,8 +73,6 @@ const AppDetails = () => {
                       </button>
                       <ToastContainer />
               </div>
-
-                    {/* <a className="btn bg-linear-to-br from-[#632EE3] to-[#9F62F2] transition-all duration-300 cursor-pointer text-white" href="/">Go Back!</a> */}
             </div>
           </div>
 

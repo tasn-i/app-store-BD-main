@@ -6,7 +6,7 @@ import { Link, NavLink } from "react-router";
 
 const Navbar = () => {
   const links = <>
-      <div className="lg:flex lg:items-center lg:gap-4">
+      <div className="lg:flex lg:items-center lg:gap-4 px-4">
         <NavLink to="/" className={({isActive}) => isActive ? "text-purple-600 font-bold underline underline-offset-8" : ""}><li>Home</li></NavLink>
         <NavLink to="/apps" className={({isActive}) => isActive ? "text-purple-600 font-bold underline underline-offset-8" : ""}><li>Apps</li></NavLink>
         <NavLink to="/installation" className={({isActive}) => isActive ? "text-purple-600 font-bold underline underline-offset-8" : ""}><li>Installation</li></NavLink>

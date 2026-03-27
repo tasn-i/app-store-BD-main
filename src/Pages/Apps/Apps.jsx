@@ -9,8 +9,6 @@ const Apps = () => {
     // console.log(data);
 
     const [search, setSearch] = useState("");
-
-    // loading
     const [loading,setLoading] = useState(true);
     useEffect(()=>{
         setTimeout(() =>{
@@ -18,8 +16,6 @@ const Apps = () => {
         }, 200)
     },[])
 
-
-    // loading
     if(loading){
             return(
                 <div className='flex flex-col justify-center items-center h-screen'>
@@ -47,18 +43,10 @@ const Apps = () => {
                     } className='w-full mx-auto md:mx-0 md:w-3xs  border border-black text-black rounded-3xl tex px-5 py-2' /> 
            
             </div>
-
-            {/* search filterData */}
-
             {
                 filteredData.length > 0 ? (
                     <AllApps data={filteredData}></AllApps>
                 ) : ( 
-
-                    // <h1 className='font-extrabold text-5xl text-purple-600 text-center items-center pt-10 h-screen'>
-                    //     App Not Found
-                    // </h1>
-                  
                     
                       <div className='flex flex-col justify-center items-center gap-6 h-screen'>
 
@@ -67,18 +55,14 @@ const Apps = () => {
                         <h1 className='font-extrabold text-5xl text-purple-600 text-center items-center pt-10 '>
                              App Not Found
                         </h1>
-                        {/* <a className="btn bg-linear-to-br from-[#632EE3] to-[#9F62F2] transition-all duration-300 cursor-pointer text-white" href="/Apps">Go Back!</a> */}
                         <Link to="/" className="btn bg-linear-to-br from-[#632EE3] to-[#9F62F2] transition-all duration-300 cursor-pointer text-white">
                             Go Back!
                         </Link>
-                      </div>
-                    
-                    
+                      </div>                 
                 )
             }
-            {/* <AllApps data={data}></AllApps>  */}
+
         </div>
     );
 };
-
 export default Apps;
