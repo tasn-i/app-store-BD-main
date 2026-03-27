@@ -5,10 +5,13 @@ App Store BD is a modern and responsive app store platform where users can explo
 
 Technologies:- 
 * React.js
+* Vite
 * React Router DOM
 * Tailwind CSS
 * Recharts
 * LocalStorage
+* Daisyui
+  
 
 
 
