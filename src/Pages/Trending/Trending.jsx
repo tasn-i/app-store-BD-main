@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router';
-// import { Link } from 'react-router';
+import { Link } from 'react-router';
 import AllApps from "../AllApps/AllApps"
 
 const Trending = () => {
@@ -20,10 +20,10 @@ const Trending = () => {
 
             
             <div className='text-center my-4'>
-                {/* <Link to="/apps">
-                   <a className="btn bg-linear-to-br from-[#632EE3] to-[#9F62F2] transition-all duration-300 cursor-pointer text-white" href="/">Show All</a>
-                </Link> */}
-                <a className="btn bg-linear-to-br from-[#632EE3] to-[#9F62F2] transition-all duration-300 cursor-pointer text-white" href="/Apps">Show All</a>
+                <Link to="/apps" className="btn bg-linear-to-br from-[#632EE3] to-[#9F62F2] transition-all duration-300 cursor-pointer text-white">
+                   Show All
+                </Link>
+                {/* <a className="btn bg-linear-to-br from-[#632EE3] to-[#9F62F2] transition-all duration-300 cursor-pointer text-white" href="/Apps">Show All</a> */}
             </div>
         </div>
     );

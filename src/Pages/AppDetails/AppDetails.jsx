@@ -17,7 +17,7 @@ const AppDetails = () => {
   const appId = parseInt(id);
   console.log(id);
 
-  const data = useLoaderData();
+  const data = useLoaderData(); 
   // console.log(data);
   const singleApp = data?.find((app) => app.id === appId);
   // console.log(singleApp);
@@ -27,7 +27,9 @@ const AppDetails = () => {
   //   return <p className="text-center items-center text-black text-2xl font-bold">Loading....</p>
   // }
 
-  const { image, title, companyName, downloads, ratingAvg, reviews, description  } = singleApp || {};
+  // const singleApp = useLoaderData();  ekhon
+
+  const { image, title, downloads, ratingAvg, reviews, description  } = singleApp || {};
 
   const handleInstalled = id =>{
 
@@ -58,7 +60,7 @@ const AppDetails = () => {
             <div className="card-body">
               <div className="border-b-2 text-gray-400 pb-4">
                   <h2 className="card-title text-black font-semibold text-xl">{title}</h2>
-                  <p className=" font-normal text-base text-gray-600">{companyName}</p>
+                  <p className=" font-normal text-base text-gray-600">Click the button to watch on Jetflix app.</p>
               </div>
               <div className="flex justify-start gap-8 text-black my-6">
                 <div className="btn btn-outline hover:bg-white text-black ">
@@ -81,24 +83,7 @@ const AppDetails = () => {
                      <button onClick={()=>handleInstalled(appId)} className="btn btn-outline text-black hover:bg-white">Installed </button>
               </div>
 
-              {/* bar Chart */}
-
-              {/* <div>
-                <h2 className="text-xl font-semibold text-black mb-4">Rating Breakdown</h2>
-                <ResponsiveContainer width="100%" height={300}>
-                  <BarChart data={singleApp?.ratings} layout="vertical" margin={{top: 20, right: 30, left: 40, bottom: 5}}>
-                    <CartesianGrid strokeDasharray="3 3"></CartesianGrid>
-                    <XAxis type="number"></XAxis>
-                    <YAxis type="category" dataKey="name"></YAxis>
-                    <Tooltip></Tooltip>
-                    <Legend></Legend>
-                    <Bar dataKey="count" fill="#4F46E5"></Bar>
-                  </BarChart>
-                </ResponsiveContainer>
-              </div> */}
-                {/* Go back */}
-
-                    <a className="btn bg-linear-to-br from-[#632EE3] to-[#9F62F2] transition-all duration-300 cursor-pointer text-white" href="/">Go Back!</a>
+                    {/* <a className="btn bg-linear-to-br from-[#632EE3] to-[#9F62F2] transition-all duration-300 cursor-pointer text-white" href="/">Go Back!</a> */}
             </div>
           </div>
 
@@ -119,7 +104,7 @@ const AppDetails = () => {
               </div>
 
               <div className="w-10/12 mx-auto">
-                <p className="font-normal text-sm text-black py-8">Description: {description}</p>
+                <p className="font-normal text-xl text-black py-8">Description:{description}</p>
               </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import AllApps from '../AllApps/AllApps';
-import { useLoaderData } from 'react-router';
+import { Link, useLoaderData } from 'react-router';
 import Logo from "../../assets/logo.png"
 import App from "../../assets/App-Error.png"
 
@@ -67,7 +67,10 @@ const Apps = () => {
                         <h1 className='font-extrabold text-5xl text-purple-600 text-center items-center pt-10 '>
                              App Not Found
                         </h1>
-                        <a className="btn bg-linear-to-br from-[#632EE3] to-[#9F62F2] transition-all duration-300 cursor-pointer text-white" href="/Apps">Go Back!</a>
+                        {/* <a className="btn bg-linear-to-br from-[#632EE3] to-[#9F62F2] transition-all duration-300 cursor-pointer text-white" href="/Apps">Go Back!</a> */}
+                        <Link to="/" className="btn bg-linear-to-br from-[#632EE3] to-[#9F62F2] transition-all duration-300 cursor-pointer text-white">
+                            Go Back!
+                        </Link>
                       </div>
                     
                     
