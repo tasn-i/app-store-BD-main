@@ -24,12 +24,21 @@ const addToStoredDB =(id) =>{
         storedAppData.push(id);
         console.log(storedAppData)
         const data = JSON.stringify(storedAppData);
-        localStorage.setItem("installation", data)
+        localStorage.setItem("installation", data);
     }
 
 
 
 
-}
+};
 
-export {addToStoredDB, getStoredApp};
+
+// Uninstall
+
+const removeFromDB = (id) => {
+    const stored =JSON.parse(localStorage.getItem("installation")) || [];
+    const updated = stored.filter(item => item !== id);
+    localStorage.setItem("installation", JSON.stringify(updated));
+};
+
+export {addToStoredDB, getStoredApp, removeFromDB};

@@ -6,7 +6,7 @@ import { Link, NavLink } from "react-router";
 
 const Navbar = () => {
   const links = <>
-      <div className="md:flex md:items-center md:gap-4">
+      <div className="lg:flex lg:items-center lg:gap-4">
         <NavLink to="/" className={({isActive}) => isActive ? "text-purple-600 font-bold underline underline-offset-8" : ""}><li>Home</li></NavLink>
         <NavLink to="/apps" className={({isActive}) => isActive ? "text-purple-600 font-bold underline underline-offset-8" : ""}><li>Apps</li></NavLink>
         <NavLink to="/installation" className={({isActive}) => isActive ? "text-purple-600 font-bold underline underline-offset-8" : ""}><li>Installation</li></NavLink>
@@ -50,6 +50,12 @@ const Navbar = () => {
                   <img className="w-8" src={logo} alt="logo" />
                   <span className="text-purple-600 text-xl">AppStoreBD</span>   
             </a>
+            {/* <Link to="/">
+                 <div className="flex flex-col-2 ">
+                    <img className="w-8" src={logo} alt="logo" />
+                    <span className="text-purple-600 text-xl">AppStoreBD</span> 
+                 </div>
+            </Link> */}
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">

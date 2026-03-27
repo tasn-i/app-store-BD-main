@@ -4,21 +4,26 @@ import { getStoredApp } from '../../Installed/addToDB';
 import App from '../App/App';
 import Apps from '../Apps/Apps';
 import Logo from "../../assets/logo.png"
+import { removeFromDB } from '../../Installed/addToDB';
+import { ToastContainer, toast } from 'react-toastify';
 
 
+
+  
 const Installation = () => {
     const [loading,setLoading] =useState(true);
     const [appList, setAppList]=useState([])
+
     const [sort, setSort] = useState("")
     const data = useLoaderData();
     const [originalApps, setOriginalApps] =useState([]);
-    console.log(data);
+    // console.log(data);
     useEffect(() =>{
         const storedAppData = getStoredApp();
         const ConvertedStoredApps= storedAppData.map(id => parseInt(id));
         // console.log(ConvertedStoredApps);
         const myInstallated = data.filter (app =>ConvertedStoredApps.includes(app.id));
-        console.log(myInstallated);
+        // console.log(myInstallated);
          setAppList(myInstallated);
 
         //  sort
@@ -45,6 +50,14 @@ const Installation = () => {
 
     }
 
+    const handleUninstall =(id) => {
+    removeFromDB(id);
+    const updatedApps = appList.filter(app => app.id !== id);
+    setAppList(updatedApps);
+    setOriginalApps(updatedApps);
+    toast.success("App Uninstalled successfully!")
+}
+
     if(loading){
         return(
             <div className='flex flex-col justify-center items-center h-screen'>
@@ -63,7 +76,7 @@ const Installation = () => {
             </div>
 
             <div className='flex justify-between items-center cursor-pointer'>
-                <div><h1 className='font-bold text-black'>Installed App{appList.length}</h1></div>
+                <div><h1 className='font-bold text-black'>Installed App: {appList.length}</h1></div>
                 <div>
                     <details className="dropdown">
                         <summary className="btn btn-outline text-black hover:bg-purple-600">Sort By downloads: {sort?sort:""}</summary>
@@ -73,9 +86,11 @@ const Installation = () => {
                         </ul>
                     </details>
                 </div>
+
+
             </div>
 
-            <div>
+            {/* <div>
                 
                 <div className= ''>
 
@@ -87,6 +102,31 @@ const Installation = () => {
 
                 </div>
                 
+            </div> */}
+
+            {/* Uninstall */}
+
+            <div className=' pt-20 w-8/12 mx-auto flex flex-col gap-10'>
+                {
+                    appList. length === 0 ?(
+                        <h1 className='text-center font-bold text-purple-600 text-2xl'>No App Installed Yet</h1>
+                    ) : (
+                        appList.map(a => <App key={a.id} singleApp={a} showButton={true} onUninstall={handleUninstall}>
+                            <button onClick={()=> handleUninstall(a.id)}
+                             className=' btn btn-outline bg-purple-500 text-black my-20 hover:bg-purple-600'>
+                                     Uninstall
+                            </button>
+                            
+                        </App>)
+                        
+                    )
+                }
+                {/* <h2 className='text-white p-20 bg-amber-600'></h2> */}
+            </div>
+            <div >
+                
+                {/* <ToastContainer  position='top-right autoClose={200}'/> */}
+                <ToastContainer/>
             </div>
 
 
