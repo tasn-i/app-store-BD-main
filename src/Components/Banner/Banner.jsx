@@ -18,8 +18,8 @@ const Banner = () => {
           <div className="mt-8 text-black">
             <a className="btn bg-white text-black mr-2" href="https://play.google.com/store/games">
               
-                <img className="w-8 h-8" src="https://img.freepik.com/premium-vector/google-play-logo_578229-280.jpg?semt=ais_incoming&w=740&q=80" alt="" />
-                {/* <FaGooglePlay size={18} className="text-cyan-500" /> */}
+                {/* <img className="w-8 h-8" src="https://img.freepik.com/premium-vector/google-play-logo_578229-280.jpg?semt=ais_incoming&w=740&q=80" alt="" /> */}
+                <FaGooglePlay size={18} className="text-cyan-500" />
                 Google Play
               
             </a>
