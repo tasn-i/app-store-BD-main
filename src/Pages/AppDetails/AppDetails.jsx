@@ -8,7 +8,11 @@ import review from "../../assets/icon-review.png"
 import { ToastContainer, toast } from 'react-toastify';
 // import{getStoredDB} from "../../Installed/addToDB"
 
+// bar Chart
+
 import { BarChart, Legend, XAxis, YAxis, CartesianGrid, Tooltip, Bar, ResponsiveContainer } from 'recharts';
+// import { RechartsDevtools } from '@recharts/devtools';
+
 
 const AppDetails = () => {
   const { id } = useParams();
@@ -17,54 +21,70 @@ const AppDetails = () => {
 
   const data = useLoaderData(); 
   // console.log(data);
-   const singleApp = data?.find((app) => app.id === appId);
+  const singleApp = data?.find((app) => app.id === appId); 
+  // console.log(singleApp);
+  // console.log(typeof id, data);
+
+  // if(!singleApp || true){
+  //   return <p className="text-center items-center text-black text-2xl font-bold">Loading....</p>
+  // }
+
+  // const singleApp = useLoaderData();  ekhon
    const [isInstalled, setIsInstalled] = useState(false);
-   const { image, title, downloads, ratingAvg, reviews, description, companyName  } = singleApp || {};
-   const handleInstalled = id =>{
+  // const storedApps = getStoredDB()
+  //  const [isInstalled, setIsInstalled] = useState(storedApps.includes(appId));
+
+  const { image, title, downloads, ratingAvg, reviews, description, companyName  } = singleApp || {};
+ 
+
+  const handleInstalled = id =>{
     addToStoredDB(id);
       setIsInstalled (true);
       toast.success("App installed successfully!")
   };
+
   // BarChart
   if(!singleApp){
     return <p className="text-center mt-10">Loading....</p>
   }
+
   return (
     <div>
-      <div>
-        <div className="bg-white w-full pt-5">
-          <div className="card card-side bg-white shadow-lg mx-auto p-8 mt-6 ">
+
+      <div className="py-20">
+        <div className="bg-white w-full pt-5 px-3 md:px-0">
+          <div className="card bg-white shadow-lg mx-auto p-4 md:p-8 mt-6 flex flex-col md:flex-row items-center md:items-start gap-6 md:w-10/12 ">
             <figure>
-              <img className="w-30 h-auto"
+              <img className="w-20 h-20 md:w-32 md:h-32 object-contain "
                 src={image}
                 alt="App"
               />
             </figure>
-            <div className="card-body">
-              <div className="border-b-2 text-gray-400 pb-4">
-                  <h2 className="card-title text-black font-bold text-2xl">{title}</h2>
-                  <p className=" font-normal text-base text-gray-600"><span className="font-semibold text-black">CompanyName : </span> {companyName}</p>
+            <div className="card-body p-0 w-full">
+              <div className="border-b-2 text-gray-400 pb-4 text-center md:text-left">
+                  <h2 className=" text-black font-bold text-xl md:text-2xl">{title}</h2>
+                  <p className=" font-normal text-sm  md:text-base text-gray-600"><span className="font-semibold text-black">CompanyName : </span> {companyName}</p>
               </div>
-              <div className="flex justify-start gap-8 text-black my-6">
-                <div className="btn btn-outline hover:bg-white text-black ">
+              <div className="flex flex-wrap justify-center md:justify-start gap-4 md:gap-8 text-black my-6">
+                <div className="btn btn-outline hover:bg-white text-black flex gap-2 ">
                     <img className=" w-4" src={iconDownload} alt="" />
                     <h4 className="text-black text-sm font-normal ">Download</h4>
                     <button className="">{downloads}</button>
                 </div>
-                <div className="btn btn-outline hover:bg-white text-black">
+                <div className="btn btn-outline hover:bg-white text-black flex gap-2 ">
                     <img className="w-4" src={Ratings} alt="" />
                     <h4 className="text-black text-sm font-normal ">RatingAvg</h4>
                     <button className="">{ratingAvg}</button>
                 </div>
-                <div className="btn btn-outline hover:bg-white text-black">
+                <div className="btn btn-outline hover:bg-white text-black flex gap-2 ">
                     <img className=" w-4" src={review} alt="" />
                     <h4 className="text-black text-sm font-normal">Review</h4>
                     <button className="">{reviews}</button>
                 </div>
               </div>
-              <div>
+              <div className="text-center md:text-left">
                      <button onClick={()=>handleInstalled(appId)} disabled={isInstalled}
-                         className={`btn btn-outline text-black ${
+                         className={`btn btn-outline text-black w-full md:w-auto ${
                             isInstalled ? 'bg-gray-300 cursor-not-allowed text-gray-500'
                             : ' hover:bg-purple-600 '
                          }`}>
@@ -78,7 +98,7 @@ const AppDetails = () => {
 
            {/* bar Chart */}
 
-              <div>
+              <div className="w-full md:10/12 mx-auto px-2">
                 <h2 className="text-xl font-semibold text-black my-4 text-center">Rating Breakdown</h2>
                 <ResponsiveContainer width="100%" height={300}>
                   <BarChart data={singleApp?.ratings} layout="vertical" margin={{top: 20, right: 30, left: 40, bottom: 5}}>
@@ -92,7 +112,7 @@ const AppDetails = () => {
                 </ResponsiveContainer>
               </div>
 
-              <div className="w-10/12 mx-auto">
+              <div className="w-full md:w-10/12 mx-auto px-3">
                 <p className="font-normal text-sm text-gray-600 py-8"><span className="font-bold text-black">Description : </span>{description}</p>
               </div>
         </div>

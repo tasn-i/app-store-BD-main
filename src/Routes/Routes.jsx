@@ -5,10 +5,9 @@ import ErrorPage from '../Pages/ErrorPaga/ErrorPage';
 import Home from '../Pages/Home/Home';
 import Apps from '../Pages/Apps/Apps';
 import Installation from '../Pages/Installation/Installation';
-// import AppDetails from '../Pages/appDetails/AppDetails';
-   import AppDetails from '../Pages/appDetails/AppDetails'
-import { createHashRouter } from 'react-router';
+import AppDetails from '../Pages/AppDetails/AppDetails';
 
+import { createHashRouter } from 'react-router';
 
 export const router = createHashRouter([
   {
@@ -38,8 +37,7 @@ export const router = createHashRouter([
           path: "/appDetails/:id",
           loader: () => fetch('appData.json'),
           Component: AppDetails
-        }
-         
+        }      
     ]
   },
 ]);

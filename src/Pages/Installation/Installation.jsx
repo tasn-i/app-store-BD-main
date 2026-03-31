@@ -6,6 +6,10 @@ import Apps from '../Apps/Apps';
 import Logo from "../../assets/logo.png"
 import { removeFromDB } from '../../Installed/addToDB';
 import { ToastContainer, toast } from 'react-toastify';
+import iconDownload from "../../assets/icon-downloads.png";
+import ratings from "../../assets/icon-ratings.png";
+
+
 
   
 const Installation = () => {
@@ -24,8 +28,10 @@ const Installation = () => {
         // console.log(myInstallated);
          setAppList(myInstallated);
 
+        //  sort
         setOriginalApps(myInstallated);
 
+        // Loading
         setTimeout(() =>{
             setLoading(false);
         }, 500)
@@ -41,8 +47,7 @@ const Installation = () => {
         else if(type === "Low"){
             const sorted = [...originalApps].sort((a,b) => a.downloads - b.downloads);
             setAppList(sorted);
-        }
-            
+        }         
     }
 
     const handleUninstall =(id) => {
@@ -62,15 +67,16 @@ const Installation = () => {
         );
     }
     return (
-        <div className='bg-white px-4 py-5 md:py-10 lg:py-30'>
+        <div className='bg-white px-4 py-30'>
             
-            <div className='text-center items-center gap-4 '>
+            {/* <h1 className='text-black'>Hellow the world</h1> */}
+            <div className='text-center items-center gap-4'>
                 <h1 className='text-black font-bold text-xl md:text-3xl'>Your Installed Apps</h1>
                 <p className='text-sm font-normal text-gray-500 my-4'>Explore All Trending Apps on the Market developed by us</p>
             </div>
 
-            <div className='flex md:justify-between items-center cursor-pointer gap-4 w-10/12 mx-auto'>
-                <div><h1 className='font-bold text-black'>Installed App: {appList.length}</h1></div>
+            <div className='text-center md:flex md:justify-between items-center cursor-pointer gap-4 w-10/12 mx-auto py-6 border-b-2 border-gray-200'>
+                <div><h1 className='font-bold text-black sm:mb-6'>Installed App: {appList.length}</h1></div>
                 <div>
                     <details className="dropdown">
                         <summary className="btn btn-outline text-black hover:bg-purple-600">Sort By downloads: {sort?sort:""}</summary>
@@ -80,33 +86,41 @@ const Installation = () => {
                         </ul>
                     </details>
                 </div>
-
-
             </div>
-
-
-            <div className=' pt-20 w-full md:w-8/12 mx-auto flex flex-col gap-10'>
+            <div className='sm:w-full sm:px-10 pt-20 md:w-11/12 mx-auto flex flex-col gap-10'>
                 {
                     appList. length === 0 ?(
                         <h1 className='text-center font-bold text-purple-600 text-2xl'>No App Installed Yet</h1>
                     ) : (
-                        appList.map(a => <App className="flex flex-col-3 bg-green" key={a.id} singleApp={a} showButton={true} onUninstall={handleUninstall}>
-                            <button onClick={()=> handleUninstall(a.id)}
-                             className=' btn btn-outline bg-purple-500 text-black my-20 hover:bg-purple-600'>
-                                     Uninstall
-                            </button>
-                            
+                        appList.map(a => <App key={a.id} singleApp={a} showButton={true} onUninstall={handleUninstall}>
+                            <div className="flex flex-2 gap-4">
+                                <img className="w-10 h-10 rounded-full " src={a.image}></img>
+                                <div>
+                                    <h2 className="font-extrabold text-2xl text-black">{a.title}</h2>
+                                    <div className='flex flex-2 gap-4'>
+                                        <span className="flex items-center mt-1 text-sm text-gray-600 btn btn-outline hover:bg-purple-50">
+                                            <img className="w-3" src={iconDownload} alt="" />
+                                            {a.downloads}
+                                        </span>
+
+                                        <span className="flex items-center mt-1 text-sm text-gray-600 btn btn-outline hover:bg-purple-50">
+                                            <img className="w-3" src={ratings} alt="" />
+                                            {a.ratingAvg}
+                                        </span>
+                                        <span className="flex items-center mt-1 text-sm text-gray-600 btn btn-outline hover:bg-purple-50">
+                                            {/* <img className="w-3" src={ratings} alt="" /> */}
+                                            {a.size} MB
+                                        </span>
+                                    </div>
+                                </div>        
+                            </div> 
                         </App>)
-                        
                     )
                 }
             </div>
             <div >
-
                 <ToastContainer/>
             </div>
-
-
         </div>
     );
 };

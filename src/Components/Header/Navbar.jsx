@@ -6,7 +6,7 @@ import { Link, NavLink } from "react-router";
 
 const Navbar = () => {
   const links = <>
-      <div className="lg:flex lg:items-center lg:gap-4 px-4">
+      <div className="lg:flex lg:items-center lg:gap-4">
         <NavLink to="/" className={({isActive}) => isActive ? "text-purple-600 font-bold underline underline-offset-8" : ""}><li>Home</li></NavLink>
         <NavLink to="/apps" className={({isActive}) => isActive ? "text-purple-600 font-bold underline underline-offset-8" : ""}><li>Apps</li></NavLink>
         <NavLink to="/installation" className={({isActive}) => isActive ? "text-purple-600 font-bold underline underline-offset-8" : ""}><li>Installation</li></NavLink>
@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <div>
       <div className="fixed top-0 left-0 z-50 w-full">
-        <div className="navbar bg-white shadow-sm text-black">
+        <div className="navbar bg-white shadow-sm text-black md:px-10">
           <div className="navbar-start">
             <div className="dropdown">
               <div
@@ -46,24 +46,24 @@ const Navbar = () => {
                 {links}
               </ul>
             </div>
-            <a className="btn btn-ghost cursor-pointer" href="/">
+            {/* <a className="btn btn-ghost cursor-pointer" href="/">
                   <img className="w-8" src={logo} alt="logo" />
                   <span className="text-purple-600 text-xl">AppStoreBD</span>   
-            </a>
-            {/* <Link to="/">
+            </a> */}
+            <Link to="/">
                  <div className="flex flex-col-2 ">
-                    <img className="w-8" src={logo} alt="logo" />
-                    <span className="text-purple-600 text-xl">AppStoreBD</span> 
+                    <img className="w-4 md:w-8" src={logo} alt="logo" />
+                    <span className="text-purple-600 text-sm md:text-xl hidden sm:block "> AppStoreBD</span> 
                  </div>
-            </Link> */}
+            </Link>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
               {links}
             </ul>
           </div>
-          <div className="navbar-end">
-            <a className="btn bg-linear-to-br from-[#632EE3] to-[#9F62F2] transition-all duration-300 cursor-pointer text-white" href="https://github.com/tasn-i"><VscGithub size={20} />Contribute</a>
+          <div className="navbar-end ">
+            <a className="btn bg-linear-to-br from-[#632EE3] to-[#9F62F2] transition-all duration-300 cursor-pointer text-white text-xs md:text-sm" href="https://github.com/tasn-i"><VscGithub size={20} />Contribute</a>
           </div>
         </div>
       </div>

@@ -16,17 +16,17 @@ const Banner = () => {
             into digital experiences that truly make an impact
           </p>
           <div className="mt-8 text-black">
-            <a href="https://play.google.com/store/games">
-              <button className="btn btn-outline mr-2 ">
-                <FaGooglePlay size={18} className="text-cyan-500" />
+            <a className="btn bg-white text-black mr-2" href="https://play.google.com/store/games">
+              
+                <img className="w-8 h-8" src="https://img.freepik.com/premium-vector/google-play-logo_578229-280.jpg?semt=ais_incoming&w=740&q=80" alt="" />
+                {/* <FaGooglePlay size={18} className="text-cyan-500" /> */}
                 Google Play
-              </button>
+              
             </a>
-            <a href="https://www.apple.com/app-store/">
-              <button className="btn btn-outline ml-2">
+            <a className="btn bg-white text-black ml-2" href="https://www.apple.com/app-store/">
+              
                 <FaAppStoreIos size={20} className="text-blue-400" />
                 App Store
-              </button>
             </a>
           </div>
           <div className="w-96 mx-auto pt-16">
